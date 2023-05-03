@@ -5,6 +5,8 @@ import TasksPage from './routes/tasks.tsx';
 import ErrorPage from './routes/error.tsx';
 
 function App() {
+
+
   return (
     <Routes>
       <Route path="/" element={<AuthPage />} />
