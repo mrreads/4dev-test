@@ -1,7 +1,7 @@
+import AuthCard from "../components/AuthCard";
+
 export default function AuthPage() {
-    return (
-        <>
-            <h1> Авторизация </h1>
-        </>
-    )
+  return (
+    <AuthCard />
+  )
 }
