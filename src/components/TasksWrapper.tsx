@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import TaskItem from "./TaskItem";
 import { useState } from 'react';
 import ITask, { EStatus } from "../types/ITask";

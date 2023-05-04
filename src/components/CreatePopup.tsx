@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import useStore from "../hooks/useStore";
 import { EPriority, EStatus } from "../types/ITask";
 
