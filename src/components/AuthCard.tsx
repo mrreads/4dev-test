@@ -28,11 +28,11 @@ export default function AuthCard() {
                         <form method='POST' className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Логин</p>
-                                <input type="text" name="login"className="input-primary" placeholder="name@company.com" required />
+                                <input type="text" name="login"className="input-primary" placeholder="admin" required />
                             </div>
                             <div className='pb-4'>
                                 <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</p>
-                                <input type="password" name="password" placeholder="••••••••" className="input-primary" required />
+                                <input type="password" name="password" placeholder="admin" className="input-primary" required />
                             </div>
                             <button type="submit" className="button-primary">ВОЙТИ</button>
                         </form>
