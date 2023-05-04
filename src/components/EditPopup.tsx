@@ -2,7 +2,7 @@ import useStore from "../hooks/useStore";
 import ITask, { EPriority, EStatus } from "../types/ITask";
 
 export default function EditPopup({ active, close, task }: { active: boolean, close: () => void, task: ITask | undefined }) {
-    const { tasks } = useStore();
+    const { tasks, setTasks } = useStore();
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
@@ -11,13 +11,19 @@ export default function EditPopup({ active, close, task }: { active: boolean, cl
         const formData = new FormData(form);
         const formJson = Object.fromEntries(formData.entries());
 
-        tasks.map((task: ITask) => {
-            if (+task.id === +formJson.id) 
+        tasks.map((t: ITask) => {
+            if (+t.id === +formJson.id) 
             {
-                task.status = +formJson.status,
-                task.priority = +formJson.priority
+                t.status = +formJson.status,
+                t.priority = +formJson.priority
             }
         });
+        close();
+    }
+
+    const handleDelete = () => {
+        const temp =  [...tasks.filter((t: ITask) => +t.id != +task!.id)];
+        setTasks(temp);
         close();
     }
     
@@ -56,7 +62,7 @@ export default function EditPopup({ active, close, task }: { active: boolean, cl
                             </select>
                         </div>
                         <div className="flex row gap-3">
-                            <div className="ml-auto button-primary cursor-pointer bg-white dark:bg-gray-800" onClick={close}>Отмена</div>
+                            <div className="ml-auto button-primary cursor-pointer bg-white dark:bg-gray-800" onClick={handleDelete}>Удалить</div>
                             <button type="submit" className="button-primary">Создать</button>
                         </div> 
                     </form>
