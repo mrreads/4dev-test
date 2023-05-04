@@ -63,7 +63,7 @@ export default function EditPopup({ active, close, task }: { active: boolean, cl
                         </div>
                         <div className="flex row gap-3">
                             <div className="ml-auto button-primary cursor-pointer bg-white dark:bg-gray-800" onClick={handleDelete}>Удалить</div>
-                            <button type="submit" className="button-primary">Создать</button>
+                            <button type="submit" className="button-primary">Сохранить</button>
                         </div> 
                     </form>
                 </div>
