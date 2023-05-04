@@ -21,7 +21,7 @@ export default function AuthCard() {
 
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:justify-start">
+            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen lg:justify-start">
                 <div className="w-[500px] bg-white rounded-lg shadow dark:border md:mt-0 sm:w-full xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-8 space-y-6 md:space-y-4 sm:p-6">
                         <h1 className="heading uppercase">Авторизация</h1>
@@ -30,7 +30,7 @@ export default function AuthCard() {
                                 <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Логин</p>
                                 <input type="text" name="login"className="input-primary" placeholder="name@company.com" required />
                             </div>
-                            <div>
+                            <div className='pb-4'>
                                 <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Пароль</p>
                                 <input type="password" name="password" placeholder="••••••••" className="input-primary" required />
                             </div>

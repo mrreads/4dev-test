@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import useOnClickOutside from './../hooks/useOnClickOutside';
 
-export default function Header() {
+export default function Header({ create }: { create: () => void }) {
     const navigate = useNavigate();
 
     const [isProfileActive, setProfileActive] = useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
 
     return(
         <div className="flex flex-row justify-between w-full p-3">
-            <button className="button-primary">НОВАЯ ЗАДАЧА</button>
+            <button className="button-primary" onClick={create}>НОВАЯ ЗАДАЧА</button>
 
             <div className="relative">
                 <div onClick={profileToggle} data-dropdown-toggle="dropdownInformation" className="cursor-pointer relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">

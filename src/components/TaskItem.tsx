@@ -6,7 +6,7 @@ import ITask, { EPriority } from "../types/ITask";
 export default function TaskItem({ data }: { data: ITask }) {
     const { title, author_name, schedule, priority } = data;
     return (
-        <div className="divide-y divide-gray-200 dark:divide-gray-700 flex flex-col py-4 px-3 mx-full max-w-full text-gray-900 bg-white rounded-lg shadow xl:p-3 lg:px-8 md:px-4 sm:px-2 dark:bg-gray-800 dark:text-white">
+        <div className="cursor-pointer hover:shadow-lg transition-all divide-y divide-gray-200 dark:divide-gray-700 flex flex-col py-4 px-3 mx-full max-w-full text-gray-900 bg-white rounded-lg shadow xl:p-3 lg:px-8 md:px-4 sm:px-2 dark:bg-gray-800 dark:text-white">
             <div>
                 <div className='flex flex-row pb-2 px-3 items-center gap-2'>
                     <div data-priority={priority} title={EPriority[priority]} /> 
