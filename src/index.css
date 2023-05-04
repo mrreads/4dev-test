@@ -4,10 +4,10 @@
 
 @layer components {
   .input-primary {
-    @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500;
+    @apply bg-gray-50 drop-shadow text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500;
   }
   .button-primary {
-    @apply w-auto text-white bg-slate-600 hover:bg-gray-700 focus:outline-none font-medium rounded-lg text-sm px-8 py-2.5 text-center active:bg-slate-900 dark:bg-slate-600;
+    @apply w-auto text-white bg-slate-600 hover:bg-gray-700 focus:outline-none font-medium rounded-lg text-sm px-8 py-2.5 text-center active:bg-slate-800 active:dark:bg-slate-950 dark:bg-slate-600;
   }
   .button-second {
     @apply w-auto text-white bg-slate-600 hover:bg-gray-700 focus:outline-none font-medium rounded-lg text-xs px-4 py-1 text-center active:bg-slate-800 dark:bg-slate-600;
