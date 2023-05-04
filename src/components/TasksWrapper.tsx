@@ -3,7 +3,14 @@ import TaskItem from "./TaskItem";
 import { useState } from 'react';
 import ITask, { EStatus } from "../types/ITask";
 
-export default function TasksWrapper({ tasks, status, text }: { tasks: ITask[], status: EStatus, text: string }) {
+interface IProps { 
+    tasks: ITask[], 
+    status: EStatus, 
+    text: string,
+    edit: (task: ITask) => void
+}
+
+export default function TasksWrapper({ tasks, status, text, edit }: IProps) {
     const [sortAsc, setSortAsc] = useState(false);
     const sortToggle = () => setSortAsc(!sortAsc);
     
@@ -20,7 +27,7 @@ export default function TasksWrapper({ tasks, status, text }: { tasks: ITask[], 
                 <p onClick={sortToggle} className="pt-1 text-gray-500 dark:text-gray-400 cursor-pointer md:text-sm">Сортировка: по { sortAsc ? 'возрастанию' : 'убыванию'} даты</p>
                 <h2 className="heading text-4xl mb-3 pt-2 uppercase"> {text}</h2>
             </div>
-            { formatedTasks.map((task: ITask) => task.status == status ? <TaskItem data={task} key={task.id} /> : null) }
+            { formatedTasks.map((task: ITask) => task.status == status ? <TaskItem edit={edit} data={task} key={task.id} /> : null) }
         </div>
     )
 }
