@@ -15,6 +15,13 @@
 
 В качестве хранилища данных используется обычный **useState** в использованием **Context**Provider.
 
+## Запуск
+```npm run dev```
+
+## Сборка
+```npm run build```
+
+
 ## Скриншоты
 ![Главная](https://i.ibb.co/2WhF4hT/1.jpg)
 ![Экран с задачами](https://i.ibb.co/zx9sMhd/2.jpg)
